@@ -6,7 +6,7 @@
 /*   By: ymohamed <ymohamed@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/17 10:24:51 by ymohamed          #+#    #+#             */
-/*   Updated: 2022/09/21 16:15:58 by ymohamed         ###   ########.fr       */
+/*   Updated: 2022/09/24 14:11:52 by ymohamed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,13 +102,12 @@ ssize_t	*set_rank_find_dup(char *fulinput, int *count, int *flag)
 	int		i;
 	int		n;
 
+	nums = 0;
 	*count = count_strings(fulinput, ' ');
-	nums = malloc(sizeof(ssize_t) * (*count));
+	if (*count)
+		nums = malloc(sizeof(ssize_t) * (*count));
 	if (!nums)
-	{
 		*flag = 1;
-		return (0);
-	}
 	i = -1;
 	n = 0;
 	while (fulinput[++i] != 0 && (!(*flag)))
@@ -119,7 +118,7 @@ ssize_t	*set_rank_find_dup(char *fulinput, int *count, int *flag)
 		if (fulinput[i] == '\0')
 			break ;
 	}
-	if (*flag)
-		free(nums);
+	if (*flag && nums)
+		free (nums);
 	return (nums);
 }

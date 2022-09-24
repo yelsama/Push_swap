@@ -6,14 +6,14 @@
 #    By: ymohamed <ymohamed@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/25 13:53:10 by ymohamed          #+#    #+#              #
-#    Updated: 2022/09/19 13:47:35 by ymohamed         ###   ########.fr        #
+#    Updated: 2022/09/24 15:37:30 by ymohamed         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = push_swap.a
 
 SOURCES = \
-		push_swap.c ps_atoi.c ps_str_utilits.c ps_list_utils.c
+		push_swap.c ps_atoi.c ps_str_utils.c ps_list_utils.c ps_sort_utils.c
 
 OBJECTS = $(SOURCES:%.c=%.o)
 
@@ -35,7 +35,7 @@ fclean: clean
 re: fclean all
 
 test:
-	gcc -g -Wall -Werror -Wextra push_swap.c ps_atoi.c ps_str_utilits.c ps_list_utils.c -o ps
+	gcc -g -Wall -Werror -Wextra push_swap.c ps_atoi.c ps_str_utils.c ps_list_utils.c ps_sort_utils.c -o ps
 
 td:
 	/bin/rm -f ps
