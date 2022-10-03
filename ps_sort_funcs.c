@@ -6,20 +6,12 @@
 /*   By: ymohamed <ymohamed@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 01:47:50 by ymohamed          #+#    #+#             */
-/*   Updated: 2022/10/03 16:24:07 by ymohamed         ###   ########.fr       */
+/*   Updated: 2022/10/03 17:32:43 by ymohamed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-// static void	shortcut(t_ps_list **ska, t_ps_list **skb, int val)//, int pos)
-// {
-// 	rr_p12_p21(ska, skb, 1);
-// 	// if ((*ska)->rank > val && pos > 2 && (*ska)->next != 0)
-// 	// 	rr_p12_p21(ska, skb, 100);
-// 	// else
-// 	sk_rk_rrk(ska, skb, 102);
-// }
 static void	from_a2b(t_ps_list **stka, t_ps_list **stkb, int hr, int div)
 {
 	int	lim;

@@ -6,14 +6,13 @@
 /*   By: ymohamed <ymohamed@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/17 11:36:13 by ymohamed          #+#    #+#             */
-/*   Updated: 2022/10/03 16:33:57 by ymohamed         ###   ########.fr       */
+/*   Updated: 2022/10/03 17:33:19 by ymohamed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-//#include <stdio.h>
 # include <unistd.h>
 # include <stdlib.h>
 # include <limits.h>

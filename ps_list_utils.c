@@ -6,7 +6,7 @@
 /*   By: ymohamed <ymohamed@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 10:15:53 by ymohamed          #+#    #+#             */
-/*   Updated: 2022/09/24 23:09:53 by ymohamed         ###   ########.fr       */
+/*   Updated: 2022/10/03 17:36:22 by ymohamed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,7 @@ t_ps_list	*fill_stack(char *fulinput, ssize_t *rank_nums, int nc, int *flag)
 		num = ps_atoi(fulinput, &i);
 		n = 0;
 		while (n < nc && num != rank_nums[n])
-			n++;	
+			n++;
 		node = ps_lstnew(num, flag, ++n);
 		ft_lstadd_back(&stack, node);
 		if (fulinput[i] == '\0')
