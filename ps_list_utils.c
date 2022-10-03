@@ -6,13 +6,13 @@
 /*   By: ymohamed <ymohamed@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 10:15:53 by ymohamed          #+#    #+#             */
-/*   Updated: 2022/09/21 15:12:25 by ymohamed         ###   ########.fr       */
+/*   Updated: 2022/09/24 23:09:53 by ymohamed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static t_ps_list	*ft_lstlast(t_ps_list *lst)
+t_ps_list	*ft_lstlast(t_ps_list *lst)
 {
 	t_ps_list	*tmp;
 

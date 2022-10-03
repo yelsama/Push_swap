@@ -6,37 +6,27 @@
 #    By: ymohamed <ymohamed@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/25 13:53:10 by ymohamed          #+#    #+#              #
-#    Updated: 2022/09/24 15:37:30 by ymohamed         ###   ########.fr        #
+#    Updated: 2022/10/03 01:50:58 by ymohamed         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = push_swap.a
+NAME = push_swap
 
 SOURCES = \
-		push_swap.c ps_atoi.c ps_str_utils.c ps_list_utils.c ps_sort_utils.c
-
-OBJECTS = $(SOURCES:%.c=%.o)
-
+		push_swap.c ps_atoi.c ps_str_utils.c ps_list_utils.c ps_sort_utils.c \
+		ps_algo_utils.c ps_sort_funcs.c
 
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
 all: $(NAME)
 
-$(NAME): $(OBJECTS)
-	ar rc $(NAME) $(OBJECTS) 
+$(NAME): $(SOURCES)
 
 clean:
-	/bin/rm -f $(OBJECTS) $(OBJECTSB)
+	/bin/rm -f $(OBJECTS)
 
 fclean: clean
 	/bin/rm -f $(NAME)
 
 re: fclean all
-
-test:
-	gcc -g -Wall -Werror -Wextra push_swap.c ps_atoi.c ps_str_utils.c ps_list_utils.c ps_sort_utils.c -o ps
-
-td:
-	/bin/rm -f ps
-
