@@ -6,7 +6,7 @@
 /*   By: ymohamed <ymohamed@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/17 10:27:30 by ymohamed          #+#    #+#             */
-/*   Updated: 2022/10/03 17:12:32 by ymohamed         ###   ########.fr       */
+/*   Updated: 2022/10/03 22:45:23 by ymohamed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,10 +52,8 @@ static char	*parsing(int c, char **v, int *flag)
 static int	sort(t_ps_list **stka, int high_rank)
 {
 	t_ps_list	*stkb;
-	int			div;
 
 	stkb = 0;
-	div = 10;
 	if (is_sorted(stka))
 		return (0);
 	if (high_rank < 51)

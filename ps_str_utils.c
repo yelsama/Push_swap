@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ps_str_utilits.c                                   :+:      :+:    :+:   */
+/*   ps_str_utils.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ymohamed <ymohamed@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/17 10:24:51 by ymohamed          #+#    #+#             */
-/*   Updated: 2022/09/24 14:11:52 by ymohamed         ###   ########.fr       */
+/*   Updated: 2022/10/03 22:46:19 by ymohamed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -110,7 +110,7 @@ ssize_t	*set_rank_find_dup(char *fulinput, int *count, int *flag)
 		*flag = 1;
 	i = -1;
 	n = 0;
-	while (fulinput[++i] != 0 && (!(*flag)))
+	while (fulinput[++i] != 0 && (!(*flag)) && n < *count)
 	{
 		nums[n] = ps_atoi(fulinput, &i);
 		*flag = is_douplicate_setord(nums, n);
